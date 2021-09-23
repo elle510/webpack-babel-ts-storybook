@@ -10,16 +10,16 @@ module.exports = {
     "@storybook/addon-essentials"
   ],
   webpackFinal: async (config) => {
-    // config.module.rules.push({
-    //   test: /\.stories\.tsx?$/,
-    //   loaders: [
-    //     {
-    //       loader: require.resolve('@storybook/source-loader'),
-    //       options: { parser: 'typescript', injectDecorator: false },
-    //     },
-    //   ],
-    //   enforce: 'pre',
-    // });
+    config.module.rules.push({
+      test: /\.stories\.tsx?$/,
+      loaders: [
+        {
+          loader: require.resolve('@storybook/source-loader'),
+          options: { parser: 'typescript', injectDecorator: false },
+        },
+      ],
+      enforce: 'pre',
+    });
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
