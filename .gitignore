@@ -74,5 +74,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 node_modules
-yarn.lock
 .DS_Store
